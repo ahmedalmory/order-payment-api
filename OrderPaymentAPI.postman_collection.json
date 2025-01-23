@@ -1,9 +1,9 @@
 {
     "info": {
-		"_postman_id": "26e574d6-5968-4811-819b-401bc268bf42",
+        "_postman_id": "26e574d6-5968-4811-819b-401bc268bf42",
         "name": "Order Payment API",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "38526946"
+        "_exporter_id": "38526946"
     },
     "item": [
         {
@@ -21,12 +21,12 @@
                     }
                 },
                 "url": {
-                    "raw": "http://localhost:8002/api/register",
+                    "raw": "http://localhost:8000/api/register",
                     "protocol": "http",
                     "host": [
                         "localhost"
                     ],
-                    "port": "8002",
+                    "port": "8000",
                     "path": [
                         "api",
                         "register"
@@ -50,12 +50,12 @@
                     }
                 },
                 "url": {
-                    "raw": "http://localhost:8002/api/login",
+                    "raw": "http://localhost:8000/api/login",
                     "protocol": "http",
                     "host": [
                         "localhost"
                     ],
-                    "port": "8002",
+                    "port": "8000",
                     "path": [
                         "api",
                         "login"
@@ -85,12 +85,12 @@
                     }
                 },
                 "url": {
-                    "raw": "http://localhost:8002/api/orders",
+                    "raw": "http://localhost:8000/api/orders",
                     "protocol": "http",
                     "host": [
                         "localhost"
                     ],
-                    "port": "8002",
+                    "port": "8000",
                     "path": [
                         "api",
                         "orders"
@@ -111,12 +111,65 @@
                     }
                 ],
                 "url": {
-                    "raw": "http://localhost:8002/api/orders/{id}",
+                    "raw": "http://localhost:8000/api/orders/{id}",
                     "protocol": "http",
                     "host": [
                         "localhost"
                     ],
-                    "port": "8002",
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "orders",
+                        "{id}"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "View Orders",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer <token>",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:8000/api/orders",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "orders"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "View Single Order",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer <token>",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:8000/api/orders/{id}",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
                     "path": [
                         "api",
                         "orders",
@@ -147,12 +200,38 @@
                     }
                 },
                 "url": {
-                    "raw": "http://localhost:8002/api/payments",
+                    "raw": "http://localhost:8000/api/payments",
                     "protocol": "http",
                     "host": [
                         "localhost"
                     ],
-                    "port": "8002",
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "payments"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "View Payments",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer <token>",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:8000/api/payments",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
                     "path": [
                         "api",
                         "payments"
