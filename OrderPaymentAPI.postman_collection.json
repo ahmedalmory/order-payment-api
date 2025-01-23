@@ -1,0 +1,165 @@
+{
+    "info": {
+		"_postman_id": "26e574d6-5968-4811-819b-401bc268bf42",
+        "name": "Order Payment API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38526946"
+    },
+    "item": [
+        {
+            "name": "Register User",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"Ahmed Almory\",\n    \"email\": \"ahmedalmory99@gmail.com\",\n    \"password\": \"password\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:8002/api/register",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8002",
+                    "path": [
+                        "api",
+                        "register"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Login User",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"email\": \"ahmedalmory99@gmail.com\",\n    \"password\": \"password\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:8002/api/login",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8002",
+                    "path": [
+                        "api",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Create Order",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer <token>",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"user_id\": 1,\n    \"items\": [\n        {\n            \"product_name\": \"Product 1\",\n            \"quantity\": 2,\n            \"price\": 10.00\n        },\n        {\n            \"product_name\": \"Product 2\",\n            \"quantity\": 1,\n            \"price\": 20.00\n        }\n    ]\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:8002/api/orders",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8002",
+                    "path": [
+                        "api",
+                        "orders"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete Order",
+            "request": {
+                "method": "DELETE",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer <token>",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:8002/api/orders/{id}",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8002",
+                    "path": [
+                        "api",
+                        "orders",
+                        "{id}"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Process Payment",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer <token>",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"order_id\": 1,\n    \"payment_method\": \"credit_card\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:8002/api/payments",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8002",
+                    "path": [
+                        "api",
+                        "payments"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
