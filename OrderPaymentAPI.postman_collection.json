@@ -73,6 +73,11 @@
                         "key": "Authorization",
                         "value": "Bearer <token>",
                         "type": "text"
+                    },
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
                     }
                 ],
                 "body": {
@@ -108,6 +113,11 @@
                         "key": "Authorization",
                         "value": "Bearer <token>",
                         "type": "text"
+                    },
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
                     }
                 ],
                 "url": {
@@ -135,6 +145,11 @@
                         "key": "Authorization",
                         "value": "Bearer <token>",
                         "type": "text"
+                    },
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
                     }
                 ],
                 "url": {
@@ -160,6 +175,11 @@
                     {
                         "key": "Authorization",
                         "value": "Bearer <token>",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
                         "type": "text"
                     }
                 ],
@@ -187,6 +207,11 @@
                     {
                         "key": "Authorization",
                         "value": "Bearer <token>",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
                         "type": "text"
                     }
                 ],
@@ -222,6 +247,11 @@
                     {
                         "key": "Authorization",
                         "value": "Bearer <token>",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
                         "type": "text"
                     }
                 ],
